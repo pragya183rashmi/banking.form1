@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking UI</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .bank-container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .balance {
+      background: #2d89ef;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .transaction {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .transaction input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .buttons button {
+      flex: 1;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .deposit {
+      background: #28a745;
+      color: white;
+    }
+    .withdraw {
+      background: #dc3545;
+      color: white;
+    }
+
+    .buttons button:hover {
+      opacity: 0.85;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bank-container">
+    <div class="balance">
+      Current Balance: $10,000
+    </div>
+
+    <div class="transaction">
+      <input type="number" placeholder="Enter amount">
+      <div class="buttons">
+        <button class="deposit">Deposit</button>
+        <button class="withdraw">Withdraw</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
